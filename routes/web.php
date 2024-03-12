@@ -5,6 +5,7 @@ use App\Http\Controllers\BiodataController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoomController;
+use App\Http\Controllers\FasilitasController;
 
 
 Route::get('/cekdpt/{nik}/detail', [BiodataController::class, 'show']);
@@ -19,6 +20,7 @@ Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::resource('users', UserController::class);
 Route::resource('rooms', RoomController::class);
+Route::resource('fasilitas', FasilitasController::class);
 /*
 GET|HEAD        users ................................................... users.index › UserController@index
 POST            users ................................................... users.store › UserController@store
